@@ -39,10 +39,11 @@ jQuery(document).ready(function(){
 	load_posts();
 	jQuery(window).scroll(function(){
 		if(jQuery(window).scrollTop() == jQuery(document).height() - jQuery(window).height()){
+	  	jQuery("html, body").animate({ scrollTop: 0 }, "slow");
 	  	getid++;
 	  	history.pushState('data', '', '');
 	  	load_posts();
-	    //alert ('bottom');
+	    
 	  }
   }); 
 });
